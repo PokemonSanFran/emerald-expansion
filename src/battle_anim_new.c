@@ -7950,6 +7950,19 @@ static void AnimTask_DynamaxGrowthStep(u8 taskId) //from CRFU
     task->func = AnimTask_DynamaxGrowthStep;
 }
 
+//Arg 0: Animation for attack
+void AnimTask_DynamaxGrowth(u8 taskId) // from CFRU
+{
+	struct Task* task = &gTasks[taskId];
+	u8 spriteId = GetAnimBattlerSpriteId(ANIM_ATTACKER);
+
+	if (gBattleAnimArgs[0] == 0)
+		PrepareAffineAnimInTaskData(task, spriteId, sDynamaxGrowthAffineAnimCmds);
+	else
+		PrepareAffineAnimInTaskData(task, spriteId, sDynamaxGrowthAttackAnimationAffineAnimCmds);
+	task->func = AnimTask_DynamaxGrowthStep;
+}
+
 void AnimTask_GetWeatherToSet(u8 taskId)
 {
     switch (gBattleMoves[gCurrentMove].argument)

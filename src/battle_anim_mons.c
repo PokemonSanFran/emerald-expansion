@@ -288,7 +288,7 @@ u8 GetBattlerSpriteFinal_Y(u8 battlerId, u16 species, bool8 a3)
         offset -= GetBattlerElevation(battlerId, species);
     }
     type = ((gBattleTypeFlags & BATTLE_TYPE_RAID)? 2 : IsDoubleBattle());
-    y = offset _ sBattlerCoords[type][GetBattlerPosition(battlerId)].y;
+    y = offset + sBattlerCoords[type][GetBattlerPosition(battlerId)].y;
     if (a3)
     {
         if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)

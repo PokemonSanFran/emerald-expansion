@@ -939,7 +939,7 @@ gBattleAnims_General::
     .4byte General_RaidBarrierAppeared      @ B_ANIM_RAID_BARRIER_APPEARED
     .4byte General_RaidBarrierDisappeared   @ B_ANIM_RAID_BARRIER_DISAPPEARED
     .4byte General_RaidShieldBroken         @ B_ANIM_RAID_SHIELD_BROKE
-    .4byte General_RaidShoackwave           @ B_ANIM_RAID_SHOCKWAVE
+    .4byte General_RaidShockwave            @ B_ANIM_RAID_SHOCKWAVE
     .4byte General_RaidBossExplosion        @ B_ANIM_RAID_BOSS_EXPLOSION
     .4byte General_SetWeather               @ B_ANIM_MAX_SET_WEATHER
 
@@ -24988,7 +24988,7 @@ SnatchMoveSwapMonForSubstitute:
 General_DynamaxGrowth:: @ PORTED FROM CFRU
     createvisualtask SoundTask_PlayCryWithEcho, 2, ANIM_ATTACKER, 2
     delay 8
-    launchtask AnimTask_DynamaxGrowth 0x5 0x1 0x0
+	launchtask AnimTask_DynamaxGrowth 0x5 0x1 0x0
     waitforvisualfinish
     end
 
@@ -25000,7 +25000,7 @@ General_RaidStormBrews:: @ PORTED FROM CRFU
     jumpreteq 4, RaidStormLevel4
 RaidStormInital:
     launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_ALL_BATTLERS 0x2 0x0 0x8 0x301F
-    launchtask AnimTask_BlendBattleAnimPal 0x2 0x5 ANIM_APL_BG 0x2 0x0 0xB 0x301F
+    launchtask AnimTask_BlendBattleAnimPal 0x2 0x5 ANIM_PAL_BG 0x2 0x0 0xB 0x301F
     call RaidStormBlows
     launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_ALL_BATTLERS 0x2 0x8 0x0 0x301F
     launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x2 0xB 0x0 0x301F
@@ -25009,7 +25009,7 @@ RaidStormInital:
 RaidStormBlows:
     createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
     playsewithpan SE_M_GUST, 0
-    delay, 0x44
+    delay 0x44
     playsewithpan SE_M_GUST, 0
     delay 0x38
     return
@@ -25053,7 +25053,7 @@ General_RaidBarrierAppeared::
     loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
     setalpha 0,16
     waitplaysewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER, 15
-    createsprite gReflectSparkleSpriteTemplate, ANIM_ATTACKER, 1, 40, 0 ANIM_TAG_BLUE_LIGHT_WALL
+	createsprite gReflectWallSpriteTemplate, ANIM_ATTACKER, 1, 40, 0, ANIM_TAG_BLUE_LIGHT_WALL
     delay 20
     createsprite gReflectSparkleSpriteTemplate, ANIM_ATTACKER, 2, 30, 0, ANIM_ATTACKER, 1
     delay 7
@@ -25128,7 +25128,7 @@ Explosion2:
     createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -16, 16, 0, 1
     delay 6
     playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-    createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -24, -, 0, 1
+    createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -24, -12, 0, 1
     delay 6
     playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
     createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 16, 16, 0, 1

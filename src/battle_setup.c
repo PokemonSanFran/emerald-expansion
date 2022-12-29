@@ -614,7 +614,8 @@ void StartRegiBattle(void)
 
 void StartRaidBattle(void)
 {
-    ScriptContext2_Enable();
+    LockPlayerFieldControls();
+    ScriptContext_Init();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_RAID | BATTLE_TYPE_DOUBLE;
     CreateBattleStartTask(GetWildBattleTransition(), RAID_BATTLE_BGM);

@@ -9891,13 +9891,13 @@ BattleScript_RaidDefenseDrop:
 	setbyte sSTAT_ANIM_PLAYED, FALSE
 	playstatchangeanimation BS_TARGET, BIT_DEF | BIT_SPDEF, STAT_CHANGE_BY_TWO | STAT_CHANGE_NEGATIVE
 	setstatchanger STAT_DEF, 2, TRUE
-	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_RaidSpDefenseDrop
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_RaidSpDefenseDrop
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_RaidSpDefenseDrop
 	printfromtable gStatDownStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_RaidSpDefenseDrop:
 	setstatchanger STAT_SPDEF, 2, TRUE
-	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_RaidBarrierDisappearedEnd
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_RaidBarrierDisappearedEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_RaidBarrierDisappearedEnd
 	printfromtable gStatDownStringIds
 	waitmessage B_WAIT_TIME_LONG
@@ -9979,7 +9979,7 @@ BattleScript_EffectRaiseSideStats::
 BattleScript_RaiseSideStatsLoop:
 	jumpiftargetnotally BattleScript_RaiseSideStatsIncrement
 	jumpiftargetabsent BattleScript_RaiseSideStatsIncrement
-	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_RaiseSideStatsIncrement
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_RaiseSideStatsIncrement
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_RaiseSideStatsIncrement
 	setgraphicalstatchangevalues
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
@@ -9999,7 +9999,7 @@ BattleScript_EffectLowerSideStats::
 BattleScript_LowerSideStatsLoop:
 	jumpiftargetally BattleScript_LowerSideStatsIncrement
 	jumpiftargetabsent BattleScript_LowerSideStatsIncrement
-	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_LowerSideStatsIncrement
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_LowerSideStatsIncrement
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_LowerSideStatsIncrement
 	setgraphicalstatchangevalues
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
