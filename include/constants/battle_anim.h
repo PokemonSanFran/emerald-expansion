@@ -535,6 +535,14 @@
 #define B_ANIM_SHELL_TRAP_SETUP         34
 #define B_ANIM_ZMOVE_ACTIVATE           35 // Using Z Moves
 #define B_ANIM_AFFECTION_HANGED_ON      36
+#define B_ANIM_DYNAMAX_GROWTH           37
+#define B_ANIM_RAID_STORM_BREWS         38
+#define B_ANIM_RAID_BARRIER_APPEARED    39
+#define B_ANIM_RAID_BARRIER_DISAPPEARED 40
+#define B_ANIM_RAID_SHIELD_BROKE        41
+#define B_ANIM_RAID_SHOCKWAVE           42
+#define B_ANIM_RAID_BOSS_EXPLOSION      43
+#define B_ANIM_MAX_SET_WEATHER          44
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

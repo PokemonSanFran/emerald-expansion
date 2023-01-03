@@ -230,6 +230,46 @@ const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
     [SPECIES_RAYQUAZA_MEGA] = sRayquazaFormSpeciesIdTable,
     [SPECIES_KYOGRE_PRIMAL] = sKyogreFormSpeciesIdTable,
     [SPECIES_GROUDON_PRIMAL] = sGroudonFormSpeciesIdTable,
+    // Gigantmax Forms
+    [SPECIES_VENUSAUR_GMAX] = sVenusaurFormSpeciesIdTable,
+    [SPECIES_CHARIZARD_GMAX] = sCharizardFormSpeciesIdTable,
+    [SPECIES_BLASTOISE_GMAX] = sBlastoiseFormSpeciesIdTable,
+    [SPECIES_BUTTERFREE_GMAX] = sButterfreeFormSpeciesIdTable,
+    [SPECIES_PIKACHU_GMAX] = sPikachuFormSpeciesIdTable,
+    [SPECIES_MEOWTH_GMAX] = sMeowthFormSpeciesIdTable,
+    [SPECIES_MACHAMP_GMAX] = sMachampFormSpeciesIdTable,
+    [SPECIES_GENGAR_GMAX] = sGengarFormSpeciesIdTable,
+    [SPECIES_KINGLER_GMAX] = sKinglerFormSpeciesIdTable,
+    [SPECIES_LAPRAS_GMAX] = sLaprasFormSpeciesIdTable,
+    [SPECIES_EEVEE_GMAX] = sEeveeFormSpeciesIdTable,
+    [SPECIES_SNORLAX_GMAX] = sSnorlaxFormSpeciesIdTable,
+#if P_GEN_5_POKEMON == TRUE
+    [SPECIES_GARBODOR_GMAX] = sGarbodorFormSpeciesIdTable,
+#endif
+#if P_GEN_7_POKEMON == TRUE
+#endif
+#if P_GEN_8_POKEMON == TRUE
+    [SPECIES_MELMETAL_GMAX] = sMelmetalFormSpeciesIdTable,
+    [SPECIES_RILLABOOM_GMAX] = sRillaboomFormSpeciesIdTable,
+    [SPECIES_CINDERACE_GMAX] = sCinderaceFormSpeciesIdTable,
+    [SPECIES_INTELEON_GMAX] = sInteleonFormSpeciesIdTable,
+    [SPECIES_CORVIKNIGHT_GMAX] = sCorviknightFormSpeciesIdTable,
+    [SPECIES_ORBEETLE_GMAX] = sOrbeetleFormSpeciesIdTable,
+    [SPECIES_DREDNAW_GMAX] = sDrednawFormSpeciesIdTable,
+    [SPECIES_COALOSSAL_GMAX] = sCoalossalFormSpeciesIdTable,
+    [SPECIES_FLAPPLE_GMAX] = sFlappleFormSpeciesIdTable,
+    [SPECIES_APPLETUN_GMAX] = sAppletunFormSpeciesIdTable,
+    [SPECIES_SANDACONDA_GMAX] = sSandacondaFormSpeciesIdTable,
+    [SPECIES_TOXTRICITY_GMAX] = sToxtricityFormSpeciesIdTable,
+    [SPECIES_CENTISKORCH_GMAX] = sCentiskorchFormSpeciesIdTable,
+    [SPECIES_HATTERENE_GMAX] = sHattereneFormSpeciesIdTable,
+    [SPECIES_GRIMMSNARL_GMAX] = sGrimmsnarlFormSpeciesIdTable,
+    [SPECIES_ALCREMIE_GMAX] = sAlcremieFormSpeciesIdTable,
+    [SPECIES_COPPERAJAH_GMAX] = sCopperajahFormSpeciesIdTable,
+    [SPECIES_DURALUDON_GMAX] = sDuraludonFormSpeciesIdTable,
+    [SPECIES_URSHIFU_GMAX] = sUrshifuFormSpeciesIdTable,
+    [SPECIES_URSHIFU_RAPID_STRIKE_GMAX] = sUrshifuFormSpeciesIdTable,
+#endif
     // Alolan Forms
     [SPECIES_RATTATA_ALOLAN] = sRattataFormSpeciesIdTable,
     [SPECIES_RATICATE_ALOLAN] = sRaticateFormSpeciesIdTable,

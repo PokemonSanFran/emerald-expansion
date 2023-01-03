@@ -246,6 +246,15 @@
 #define VARIOUS_CAN_TELEPORT                        155
 #define VARIOUS_GET_BATTLER_SIDE                    156
 #define VARIOUS_CHECK_PARENTAL_BOND_COUNTER         157
+#define VARIOUS_SET_RAID_BARRIER                    158
+#define VARIOUS_CLEAR_RAID_BARRIER                  159
+#define VARIOUS_DO_RAID_SHOCKWAVE                   160
+#define VARIOUS_JUMP_IF_NO_BALLS                    161
+#define VARIOUS_CATCH_RAID_BOSS                     162
+#define VARIOUS_HIDE_HEALTHBOXES_ON_SIDE            163
+#define VARIOUS_SET_MAX_MOVE_EFFECT                 164
+#define VARIOUS_JUMP_IF_TARGET_NOT_ALLY             165
+#define VARIOUS_JUMP_IF_TARGET_ABSENT               166
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
@@ -321,7 +330,8 @@
 #define MOVEEND_WEATHER_FORM                      33
 #define MOVEEND_SYMBIOSIS                         34
 #define MOVEEND_CLEAR_BITS                        35
-#define MOVEEND_COUNT                             36
+#define MOVEEND_RAID                              36
+#define MOVEEND_COUNT                             37
 
 // switch cases
 #define B_SWITCH_NORMAL     0

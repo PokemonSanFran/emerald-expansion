@@ -975,6 +975,47 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_KYOGRE_PRIMAL] = _("Kyogre"),
     [SPECIES_GROUDON_PRIMAL] = _("Groudon"),
 
+    // Gigantamax
+    [SPECIES_VENUSAUR_GMAX] = _("Venusaur"),
+    [SPECIES_CHARIZARD_GMAX] = _("Charizard"),
+    [SPECIES_BLASTOISE_GMAX] = _("Blastoise"),
+    [SPECIES_BUTTERFREE_GMAX] = _("Butterfree"),
+    [SPECIES_PIKACHU_GMAX] = _("Pikachu"),
+    [SPECIES_MEOWTH_GMAX] = _("Meowth"),
+    [SPECIES_MACHAMP_GMAX] = _("Machamp"),
+    [SPECIES_GENGAR_GMAX] = _("Gengar"),
+    [SPECIES_KINGLER_GMAX] = _("Kingler"),
+    [SPECIES_LAPRAS_GMAX] = _("Lapras"),
+    [SPECIES_EEVEE_GMAX] = _("Eevee"),
+    [SPECIES_SNORLAX_GMAX] = _("Snorlax"),
+#if P_GEN_5_POKEMON == TRUE
+    [SPECIES_GARBODOR_GMAX] = _("Garbodor"),
+#endif
+#if P_GEN_7_POKEMON == TRUE
+    [SPECIES_MELMETAL_GMAX] = _("Melmetal"),
+#endif
+#if P_GEN_8_POKEMON == TRUE
+    [SPECIES_RILLABOOM_GMAX] = _("Rillaboom"),
+    [SPECIES_CINDERACE_GMAX] = _("Cinderace"),
+    [SPECIES_INTELEON_GMAX] = _("Inteleon"),
+    [SPECIES_CORVIKNIGHT_GMAX] = _("Corviknigh"),
+    [SPECIES_ORBEETLE_GMAX] = _("Orbeetle"),
+    [SPECIES_DREDNAW_GMAX] = _("Drednaw"),
+    [SPECIES_COALOSSAL_GMAX] = _("Coalossal"),
+    [SPECIES_FLAPPLE_GMAX] = _("Flapple"),
+    [SPECIES_APPLETUN_GMAX] = _("Appletun"),
+    [SPECIES_SANDACONDA_GMAX] = _("Sandaconda"),
+    [SPECIES_TOXTRICITY_GMAX] = _("Toxtricity"),
+    [SPECIES_CENTISKORCH_GMAX] = _("Centiskorc"),
+    [SPECIES_HATTERENE_GMAX] = _("Hatterene"),
+    [SPECIES_GRIMMSNARL_GMAX] = _("Grimmsnarl"),
+    [SPECIES_ALCREMIE_GMAX] = _("Alcremie"),
+    [SPECIES_COPPERAJAH_GMAX] = _("Copperajah"),
+    [SPECIES_DURALUDON_GMAX] = _("Duraludon"),
+    [SPECIES_URSHIFU_GMAX] = _("Urshifu"),
+    [SPECIES_URSHIFU_RAPID_STRIKE_GMAX] = _("Urshifu"),
+#endif
+
     // Alolan Forms
     [SPECIES_RATTATA_ALOLAN] = _("Rattata"),
     [SPECIES_RATICATE_ALOLAN] = _("Raticate"),

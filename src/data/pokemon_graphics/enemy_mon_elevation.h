@@ -170,6 +170,8 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_LATIAS_MEGA] = 8,
     [SPECIES_LATIOS_MEGA] = 8,
     [SPECIES_RAYQUAZA_MEGA] = 4,
+    // Gigantamax
+    [SPECIES_BUTTERFREE_GMAX] = 10,
     // Alolan Forms
     [SPECIES_RAICHU_ALOLAN] = 4,
     [SPECIES_GEODUDE_ALOLAN] = 16,

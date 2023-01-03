@@ -43,17 +43,23 @@ static const struct UCoords8 sBattlerCoords[][MAX_BATTLERS_COUNT] =
 #endif
 {
     { // Single battle
-        { 72, 80 },
-        { 176, 40 },
-        { 48, 40 },
-        { 112, 80 },
+        [B_POSITION_PLAYER_LEFT]    = { 72, 80 },
+        [B_POSITION_OPPONENT_LEFT]  = { 176, 40 },
+        [B_POSITION_PLAYER_RIGHT]   = { 48, 40 },
+        [B_POSITION_OPPONENT_RIGHT] = { 112, 80 },
     },
     { // Double battle
-        { 32, 80 },
-        { 200, 40 },
-        { 90, 88 },
-        { 152, 32 },
+        [B_POSITION_PLAYER_LEFT]    = { 32, 80 },
+        [B_POSITION_OPPONENT_LEFT]  = { 200, 40 },
+        [B_POSITION_PLAYER_RIGHT]   = { 90, 88 },
+        [B_POSITION_OPPONENT_RIGHT] = { 152, 32 },
     },
+    { // Raid battle
+        [B_POSITION_PLAYER_LEFT]    = { 32, 80 },
+        [B_POSITION_OPPONENT_LEFT]  = { 176, 40 },
+        [B_POSITION_PLAYER_RIGHT]   = { 90, 88 },
+        [B_POSITION_OPPONENT_RIGHT]  = { 176, 40 },
+    }
 };
 
 // One entry for each of the four Castform forms.
@@ -120,7 +126,7 @@ static const struct SpriteSheet sSpriteSheets_MoveEffectMons[] =
 
 u8 GetBattlerSpriteCoord(u8 battlerId, u8 coordType)
 {
-    u8 retVal;
+    u8 retVal, type;
     u16 species;
     struct Pokemon *mon, *illusionMon;
     struct BattleSpriteInfo *spriteInfo;
@@ -135,10 +141,12 @@ u8 GetBattlerSpriteCoord(u8 battlerId, u8 coordType)
     {
     case BATTLER_COORD_X:
     case BATTLER_COORD_X_2:
-        retVal = sBattlerCoords[WhichBattleCoords(battlerId)][GetBattlerPosition(battlerId)].x;
+        type = (gBattleTypeFlags & BATTLE_TYPE_RAID) ? 2 : (IsDoubleBattle());
+        retVal = sBattlerCoords[type][GetBattlerPosition(battlerId)].x;
         break;
     case BATTLER_COORD_Y:
-        retVal = sBattlerCoords[WhichBattleCoords(battlerId)][GetBattlerPosition(battlerId)].y;
+        type = (gBattleTypeFlags & BATTLE_TYPE_RAID) ? 2 : (IsDoubleBattle());
+        retVal = sBattlerCoords[type][GetBattlerPosition(battlerId)].y;
         break;
     case BATTLER_COORD_Y_PIC_OFFSET:
     case BATTLER_COORD_Y_PIC_OFFSET_DEFAULT:
@@ -268,7 +276,7 @@ u8 GetBattlerElevation(u8 battlerId, u16 species)
 u8 GetBattlerSpriteFinal_Y(u8 battlerId, u16 species, bool8 a3)
 {
     u16 offset;
-    u8 y;
+    u8 y, type;
 
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER || IsContest())
     {
@@ -279,7 +287,8 @@ u8 GetBattlerSpriteFinal_Y(u8 battlerId, u16 species, bool8 a3)
         offset = GetBattlerYDelta(battlerId, species);
         offset -= GetBattlerElevation(battlerId, species);
     }
-    y = offset + sBattlerCoords[WhichBattleCoords(battlerId)][GetBattlerPosition(battlerId)].y;
+    type = ((gBattleTypeFlags & BATTLE_TYPE_RAID)? 2 : IsDoubleBattle());
+    y = offset _ sBattlerCoords[type][GetBattlerPosition(battlerId)].y;
     if (a3)
     {
         if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)

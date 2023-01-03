@@ -974,6 +974,46 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_RAYQUAZA_MEGA] = sRayquazaLevelUpLearnset,
     [SPECIES_KYOGRE_PRIMAL] = sKyogreLevelUpLearnset,
     [SPECIES_GROUDON_PRIMAL] = sGroudonLevelUpLearnset,
+    // Gigantamax
+    [SPECIES_VENUSAUR_GMAX] = sVenusaurLevelUpLearnset,
+    [SPECIES_CHARIZARD_GMAX] = sCharizardLevelUpLearnset,
+    [SPECIES_BLASTOISE_GMAX] = sBlastoiseLevelUpLearnset,
+    [SPECIES_BUTTERFREE_GMAX] = sButterfreeLevelUpLearnset,
+    [SPECIES_PIKACHU_GMAX] = sPikachuLevelUpLearnset,
+    [SPECIES_MEOWTH_GMAX] = sMeowthLevelUpLearnset,
+    [SPECIES_MACHAMP_GMAX] = sMachampLevelUpLearnset,
+    [SPECIES_GENGAR_GMAX] = sGengarLevelUpLearnset,
+    [SPECIES_KINGLER_GMAX] = sKinglerLevelUpLearnset,
+    [SPECIES_LAPRAS_GMAX] = sLaprasLevelUpLearnset,
+    [SPECIES_EEVEE_GMAX] = sEeveeLevelUpLearnset,
+    [SPECIES_SNORLAX_GMAX] = sSnorlaxLevelUpLearnset,
+#if P_GEN_5_POKEMON == TRUE
+    [SPECIES_GARBODOR_GMAX] = sGarbodorLevelUpLearnset,
+#endif
+#if P_GEN_7_POKEMON == TRUE
+    [SPECIES_MELMETAL_GMAX] = sMelmetalLevelUpLearnset,
+#endif
+#if P_GEN_8_POKEMON == TRUE
+    [SPECIES_RILLABOOM_GMAX] = sRillaboomLevelUpLearnset,
+    [SPECIES_CINDERACE_GMAX] = sCinderaceLevelUpLearnset,
+    [SPECIES_INTELEON_GMAX] = sInteleonLevelUpLearnset,
+    [SPECIES_CORVIKNIGHT_GMAX] = sCorviknightLevelUpLearnset,
+    [SPECIES_ORBEETLE_GMAX] = sOrbeetleLevelUpLearnset,
+    [SPECIES_DREDNAW_GMAX] = sDrednawLevelUpLearnset,
+    [SPECIES_COALOSSAL_GMAX] = sCoalossalLevelUpLearnset,
+    [SPECIES_FLAPPLE_GMAX] = sFlappleLevelUpLearnset,
+    [SPECIES_APPLETUN_GMAX] = sAppletunLevelUpLearnset,
+    [SPECIES_SANDACONDA_GMAX] = sSandacondaLevelUpLearnset,
+    [SPECIES_TOXTRICITY_GMAX] = sToxtricityLevelUpLearnset,
+    [SPECIES_CENTISKORCH_GMAX] = sCentiskorchLevelUpLearnset,
+    [SPECIES_HATTERENE_GMAX] = sHattereneLevelUpLearnset,
+    [SPECIES_GRIMMSNARL_GMAX] = sGrimmsnarlLevelUpLearnset,
+    [SPECIES_ALCREMIE_GMAX] = sAlcremieLevelUpLearnset,
+    [SPECIES_COPPERAJAH_GMAX] = sCopperajahLevelUpLearnset,
+    [SPECIES_DURALUDON_GMAX] = sDuraludonLevelUpLearnset,
+    [SPECIES_URSHIFU_GMAX] = sUrshifuLevelUpLearnset,
+    [SPECIES_URSHIFU_RAPID_STRIKE_GMAX] = sUrshifuRapidStrikeStyleLevelUpLearnset,
+#endif
     // Alolan Forms
     [SPECIES_RATTATA_ALOLAN] = sRattataAlolanLevelUpLearnset,
     [SPECIES_RATICATE_ALOLAN] = sRaticateAlolanLevelUpLearnset,

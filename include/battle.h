@@ -13,6 +13,7 @@
 #include "battle_bg.h"
 #include "pokeball.h"
 #include "battle_debug.h"
+#include "battle_raid.h"
 
 #define GET_BATTLER_SIDE(battler)         (GetBattlerPosition(battler) & BIT_SIDE)
 #define GET_BATTLER_SIDE2(battler)        (gBattlerPositions[battler] & BIT_SIDE)
@@ -520,6 +521,66 @@ struct StolenItem
     u16 stolen:1;
 };
 
+struct FixedMonSet
+{
+    u16 species;
+    u16 nature;
+    u8 hpIv;
+    u8 atkIv;
+    u8 defIv;
+    u8 spAtkIv;
+    u8 spDefIv;
+    u8 spdIv;
+    u8 hpEv;
+    u8 atkEv;
+    u8 defEv;
+    u8 spAtkEv;
+    u8 spDefEv;
+    u8 spdEv;
+    u8 ability;
+    u16 item;
+    u16 moves[MAX_MON_MOVES];
+    u16 ball;
+};
+
+struct MultiRaidTrainer
+{
+    u16 owNum; // overworld graphics id
+    u8 trainerClass;
+    u8 backSpriteId;
+    u8 gender;
+    u32 otId;
+    const u8 *name[12];
+    const struct FixedMonSet *sets[RAID_STAR_COUNT];
+    u8 setSizes[RAID_STAR_COUNT];
+};
+
+struct DynamaxData
+{
+    u8 toDynamax;
+    u8 dynamaxedIds; // flags using gBitTable
+    u8 dynamaxTurns[2]; // used to store dynamax turns remaining for each side
+    u8 ppBuffer[2][MAX_MON_MOVES]; // used to store base move PP for each side
+    u8 usingMaxMove; // flags using gBitTable
+    u16 triggerSpriteId;
+    bool8 playerSelect;
+    bool8 alreadyDynamaxed[2]; // for each side
+};
+
+struct RaidBattleData
+{
+    u8 stars;
+    u8 thresholdsRemaining;
+    u8 shields;
+    u32 shieldSpriteIds[MAX_BARRIER_COUNT];
+    u32 storedDmg;
+    u8 state;
+    u8 stormTurns;
+    u8 energyPos;
+    bool8 movedTwice;
+    bool8 usedShockwave;
+};
+
 struct BattleStruct
 {
     u8 turnEffectsTracker;
@@ -651,7 +712,9 @@ struct BattleStruct
     // When using a move which hits multiple opponents which is then bounced by a target, we need to make sure, the move hits both opponents, the one with bounce, and the one without.
     u8 attackerBeforeBounce:2;
     u8 targetsDone[MAX_BATTLERS_COUNT]; // Each battler as a bit.
-    u16 overwrittenAbilities[MAX_BATTLERS_COUNT];    // abilities overwritten during battle (keep separate from battle history in case of switching)
+    u16 overwrittenAbilities[MAX_BATTLERS_COUNT];    // abilities overwritten during battle (keep separate from battle history in case of switching
+    struct DynamaxData dynamax;
+    struct RaidBattleData raid;
 };
 
 #define F_DYNAMIC_TYPE_1 (1 << 6)

@@ -3649,7 +3649,7 @@ static void TryDoEventsBeforeFirstTurn(void)
     {
         for (i = 0; i < gBattlersCount; i++)
         {
-            if (gBattleMons[i].hp == 0 || gBattleMons[i].species == SPECIES_NONE)
+            if (gBattleMons[i].hp == 0 || gBattleMons[i].species == SPECIES_NONE || (gBattleTypeFlags & BATTLE_TYPE_RAID && i == B_POSITION_OPPONENT_RIGHT))
                 gAbsentBattlerFlags |= gBitTable[i];
         }
     }
@@ -3708,6 +3708,16 @@ static void TryDoEventsBeforeFirstTurn(void)
                 }
             }
         }
+    }
+
+    if (gBattleTypeFlags & BATTLE_TYPE_RAID && !(gBattleStruct->raid.state & INTRO_COMPLETED))
+    {
+        InitRaidVariables();
+        gBattlerAttacker = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+        if (GetBattlerHoldEffect(gBattlerAttacker, FALSE) == HOLD_EFFECT_MEGA_STONE)
+            gBattleCommunication[MULTIUSE_STATE] = 1;
+        BattleScriptExecute(BattleScript_RaidIntro);
+        return;
     }
 
     // Check neutralizing gas
@@ -3857,6 +3867,12 @@ void BattleTurnPassed(void)
     GetAiLogicData(); // get assumed abilities, hold effects, etc of all battlers
     gBattleMainFunc = HandleTurnActionSelectionState;
     gRandomTurnNumber = Random();
+    
+    // Raid storm checks
+    if (gBattleTypeFlags & BATTLE_TYPE_RAID)
+        IncrementRaidStorm();
+    if (gBattleStruct->raid.stormTurns >= RAID_STORM_MAX)
+        gBattleMainFunc = HandleEndTurn_FinishBattle;
 
     if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
         BattleScriptExecute(BattleScript_PalacePrintFlavorText);
@@ -3881,6 +3897,11 @@ u8 IsRunningFromBattleImpossible(void)
     {
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DONT_LEAVE_BIRCH;
         return BATTLE_RUN_FORBIDDEN;
+    }
+    if (gBattleTypeFlags& BATTLE_TYPE_RAID)
+    {
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE;
+        return 1;
     }
     if (GetBattlerPosition(gActiveBattler) == B_POSITION_PLAYER_RIGHT && WILD_DOUBLE_BATTLE
         && IsBattlerAlive(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT))) // The second pokemon cannot run from a double wild battle, unless it's the only alive mon.
@@ -4172,6 +4193,7 @@ static void HandleTurnActionSelectionState(void)
                         RecordedBattle_ClearBattlerAction(GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gActiveBattler))), 3);
                     }
 
+                    gBattleStruct->dynamax.toDynamax &= ~(gBitTable[BATTLE_PARTNER(GetBattlerPosition(gActiveBattler))]);
                     gBattleStruct->mega.toEvolve &= ~(gBitTable[BATTLE_PARTNER(GetBattlerPosition(gActiveBattler))]);
                     gBattleStruct->zmove.toBeUsed[BATTLE_PARTNER(GetBattlerPosition(gActiveBattler))] = MOVE_NONE;
                     BtlController_EmitEndBounceEffect(BUFFER_A);
@@ -4259,9 +4281,13 @@ static void HandleTurnActionSelectionState(void)
                                 RecordedBattle_SetBattlerAction(gActiveBattler, gBattleResources->bufferB[gActiveBattler][2]);
                                 RecordedBattle_SetBattlerAction(gActiveBattler, gBattleResources->bufferB[gActiveBattler][3]);
                             }
-                            *(gBattleStruct->chosenMovePositions + gActiveBattler) = gBattleResources->bufferB[gActiveBattler][2] & ~RET_MEGA_EVOLUTION;
+                            *(gBattleStruct->chosenMovePositions + gActiveBattler) = gBattleResources->bufferB[gActiveBattler][2] & ~RET_MEGA_EVOLUTION & ~RET_DYNAMAX;
                             gChosenMoveByBattler[gActiveBattler] = gBattleMons[gActiveBattler].moves[*(gBattleStruct->chosenMovePositions + gActiveBattler)];
                             *(gBattleStruct->moveTarget + gActiveBattler) = gBattleResources->bufferB[gActiveBattler][3];
+                            if (gBattleResources->bufferB[gActiveBattler][2] & RET_DYNAMAX && ~(gBattleStruct->dynamax.dynamaxedIds & gBitTable[gActiveBattler]))
+                                gBattleStruct->dynamax.toDynamax |= gBitTable[gActiveBattler];
+                            if (ShouldUseMaxMove(gActiveBattler, gChosenMoveByBattler[gActiveBattler]))
+                                gBattleStruct->dynamax.usingMaxMove |= gBitTable[gActiveBattler];
                             if (gBattleResources->bufferB[gActiveBattler][2] & RET_MEGA_EVOLUTION)
                                 gBattleStruct->mega.toEvolve |= gBitTable[gActiveBattler];
                             gBattleCommunication[gActiveBattler]++;
@@ -4563,6 +4589,11 @@ s8 GetMovePriority(u32 battlerId, u16 move)
     u16 ability = GetBattlerAbility(battlerId);
 
     priority = gBattleMoves[move].priority;
+
+    //Max Guarďcheck
+    if (gBattleStruct->dynamax.usingMaxMove & gBitTable[battlerId] && gBattleMoves[move].split == SPLIT_STATUS)
+        priority = gBattleMoves[MOVE_MAX_GUARD].priority;
+
     if (ability == ABILITY_GALE_WINGS
     #if B_GALE_WINGS >= GEN_7
         && BATTLER_MAX_HP(battlerId)
@@ -4851,6 +4882,9 @@ static void TurnValuesCleanUp(bool8 var0)
     gSideStatuses[1] &= ~(SIDE_STATUS_QUICK_GUARD | SIDE_STATUS_WIDE_GUARD | SIDE_STATUS_CRAFTY_SHIELD | SIDE_STATUS_MAT_BLOCK);
     gSideTimers[0].followmeTimer = 0;
     gSideTimers[1].followmeTimer = 0;
+
+    if (gBattleTypeFlags & BATTLE_TYPE_RAID)
+        gBattleStruct->raid.movedTwice = gBattleStruct->raid.usedShockwave = FALSE;
 }
 
 void SpecialStatusesClear(void)
@@ -4866,6 +4900,14 @@ static void CheckMegaEvolutionBeforeTurn(void)
         {
             gActiveBattler = gBattlerAttacker = gBattleStruct->mega.battlerId;
             gBattleStruct->mega.battlerId++;
+            if (gBattleStruct->dynamax.toDynamax & gBitTable[gActiveBattler])
+            {
+                gBattleStruct->dynamax.toDynamax &= ~(gBitTable[gActiveBattler]);
+                gBattleScripting.battler = gActiveBattler;
+                PrepareBattlerForDynamax(gActiveBattler);
+                BattleScriptExecute(BattleScript_DynamaxBegins);
+                return;
+            }
             if (gBattleStruct->mega.toEvolve & gBitTable[gActiveBattler]
                 && !(gProtectStructs[gActiveBattler].noValidMoves))
             {
@@ -5167,7 +5209,7 @@ static void HandleEndTurn_MonFled(void)
     gBattleMainFunc = HandleEndTurn_FinishBattle;
 }
 
-static void HandleEndTurn_FinishBattle(void)
+void HandleEndTurn_FinishBattle(void)
 {
     u32 i;
 

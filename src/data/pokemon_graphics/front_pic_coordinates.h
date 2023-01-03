@@ -978,6 +978,210 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_RAYQUAZA_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_KYOGRE_PRIMAL]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_GROUDON_PRIMAL]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
+    // Gigantamax
+    [SPECIES_VENUSAUR_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 5,
+    },
+
+    [SPECIES_CHARIZARD_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_BLASTOISE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 4,
+    },
+
+    [SPECIES_BUTTERFREE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 10,
+    },
+
+    [SPECIES_PIKACHU_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 1,
+    },
+
+    [SPECIES_MEOWTH_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 3,
+    },
+
+    [SPECIES_MACHAMP_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_GENGAR_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 8,
+    },
+
+    [SPECIES_KINGLER_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_LAPRAS_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_EEVEE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 6,
+    },
+
+    [SPECIES_SNORLAX_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+#if P_GEN_5_POKEMON == TRUE
+    [SPECIES_GARBODOR_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+#endif
+
+#if P_GEN_7_POKEMON == TRUE
+    [SPECIES_MELMETAL_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+#endif
+
+#if P_GEN_8_POKEMON == TRUE
+    [SPECIES_RILLABOOM_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_CINDERACE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_INTELEON_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_CORVIKNIGHT_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 3,
+    },
+
+    [SPECIES_ORBEETLE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_DREDNAW_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_COALOSSAL_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_FLAPPLE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 2,
+    },
+
+    [SPECIES_APPLETUN_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 2,
+    },
+
+    [SPECIES_SANDACONDA_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_TOXTRICITY_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_CENTISKORCH_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 5,
+    },
+
+    [SPECIES_HATTERENE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_GRIMMSNARL_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_ALCREMIE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_COPPERAJAH_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_DURALUDON_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_URSHIFU_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+
+    [SPECIES_URSHIFU_RAPID_STRIKE_GMAX] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+#endif
     // Alolan Forms        
     [SPECIES_RATTATA_ALOLAN]               = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
     [SPECIES_RATICATE_ALOLAN]              = { .size = MON_COORDS_SIZE(56, 48), .y_offset =  8 },

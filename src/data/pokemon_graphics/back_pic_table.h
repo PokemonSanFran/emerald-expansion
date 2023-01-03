@@ -975,6 +975,46 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
     SPECIES_SPRITE(KYOGRE_PRIMAL, gMonBackPic_KyogrePrimal),
     SPECIES_SPRITE(GROUDON_PRIMAL, gMonBackPic_GroudonPrimal),
 
+    SPECIES_SPRITE(VENUSAUR_GMAX, gMonBackPic_VenusaurGmax),
+    SPECIES_SPRITE(CHARIZARD_GMAX, gMonBackPic_CharizardGmax),
+    SPECIES_SPRITE(BLASTOISE_GMAX, gMonBackPic_BlastoiseGmax),
+    SPECIES_SPRITE(BUTTERFREE_GMAX, gMonBackPic_ButterfreeGmax),
+    SPECIES_SPRITE(PIKACHU_GMAX, gMonBackPic_PikachuGmax),
+    SPECIES_SPRITE(MEOWTH_GMAX, gMonBackPic_MeowthGmax),
+    SPECIES_SPRITE(MACHAMP_GMAX, gMonBackPic_MachampGmax),
+    SPECIES_SPRITE(GENGAR_GMAX, gMonBackPic_GengarGmax),
+    SPECIES_SPRITE(KINGLER_GMAX, gMonBackPic_KinglerGmax),
+    SPECIES_SPRITE(LAPRAS_GMAX, gMonBackPic_LaprasGmax),
+    SPECIES_SPRITE(EEVEE_GMAX, gMonBackPic_EeveeGmax),
+    SPECIES_SPRITE(SNORLAX_GMAX, gMonBackPic_SnorlaxGmax),
+#if P_GEN_5_POKEMON == TRUE
+    SPECIES_SPRITE(GARBODOR_GMAX, gMonBackPic_GarbodorGmax),
+#endif
+#if P_GEN_7_POKEMON == TRUE
+    SPECIES_SPRITE(MELMETAL_GMAX, gMonBackPic_MelmetalGmax),
+#endif
+#if P_GEN_8_POKEMON == TRUE
+    SPECIES_SPRITE(RILLABOOM_GMAX, gMonBackPic_RillaboomGmax),
+    SPECIES_SPRITE(CINDERACE_GMAX, gMonBackPic_CinderaceGmax),
+    SPECIES_SPRITE(INTELEON_GMAX, gMonBackPic_InteleonGmax),
+    SPECIES_SPRITE(CORVIKNIGHT_GMAX, gMonBackPic_CorviknightGmax),
+    SPECIES_SPRITE(ORBEETLE_GMAX, gMonBackPic_OrbeetleGmax),
+    SPECIES_SPRITE(DREDNAW_GMAX, gMonBackPic_DrednawGmax),
+    SPECIES_SPRITE(COALOSSAL_GMAX, gMonBackPic_CoalossalGmax),
+    SPECIES_SPRITE(FLAPPLE_GMAX, gMonBackPic_FlappleGmax),
+    SPECIES_SPRITE(APPLETUN_GMAX, gMonBackPic_AppletunGmax),
+    SPECIES_SPRITE(SANDACONDA_GMAX, gMonBackPic_SandacondaGmax),
+    SPECIES_SPRITE(TOXTRICITY_GMAX, gMonBackPic_ToxtricityGmax),
+    SPECIES_SPRITE(CENTISKORCH_GMAX, gMonBackPic_CentiskorchGmax),
+    SPECIES_SPRITE(HATTERENE_GMAX, gMonBackPic_HattereneGmax),
+    SPECIES_SPRITE(GRIMMSNARL_GMAX, gMonBackPic_GrimmsnarlGmax),
+    SPECIES_SPRITE(ALCREMIE_GMAX, gMonBackPic_AlcremieGmax),
+    SPECIES_SPRITE(COPPERAJAH_GMAX, gMonBackPic_CopperajahGmax),
+    SPECIES_SPRITE(DURALUDON_GMAX, gMonBackPic_DuraludonGmax),
+    SPECIES_SPRITE(URSHIFU_GMAX, gMonBackPic_UrshifuGmax),
+    SPECIES_SPRITE(URSHIFU_RAPID_STRIKE_GMAX, gMonBackPic_UrshifuRapidStrikeGmax),
+#endif
+
     SPECIES_SPRITE(RATTATA_ALOLAN, gMonBackPic_RattataAlolan),
     SPECIES_SPRITE(RATICATE_ALOLAN, gMonBackPic_RaticateAlolan),
     SPECIES_SPRITE(RAICHU_ALOLAN, gMonBackPic_RaichuAlolan),

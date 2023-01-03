@@ -443,4 +443,23 @@ extern const u8 BattleScript_StatUpZMove[];
 extern const u8 BattleScript_HealReplacementZMove[];
 extern const u8 BattleScript_EffectExtremeEvoboost[];
 
+//raid battles
+extern const u8 BattleScript_DynamaxBegins[];
+extern const u8 BattleScript_DynamaxEnds[];
+extern const u8 BattleScript_RaidIntro[];
+extern const u8 BattleScript_RaidStormBrews[];
+extern const u8 BattleScript_RaidBallBlock[];
+extern const u8 BattleScript_RaidBarrierAppeared[];
+extern const u8 BattleScript_RaidBarrierDisappeared[];
+extern const u8 BattleScript_RaidShieldBroken[];
+extern const u8 BattleScript_RaidShockwave[];
+extern const u8 BattleScript_RaidVictory[];
+extern const u8 BattleScript_FaintRaidBoss[];
+extern const u8 BattleScript_RaidDefeat[];
+extern const u8 BattleScript_MovePreventedByDynamax[];
+extern const u8 BattleScript_EffectRaiseSideStats[];
+extern const u8 BattleScript_EffectLowerSideStats[];
+extern const u8 BattleScript_EffectSetWeather[];
+extern const u8 BattleScript_EffectSetTerrain[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

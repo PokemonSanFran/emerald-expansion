@@ -986,6 +986,45 @@ const u32 gMonFrontPic_DiancieMega[] = INCBIN_U32("graphics/pokemon/diancie/mega
 const u32 gMonFrontPic_RayquazaMega[] = INCBIN_U32("graphics/pokemon/rayquaza/mega/front.4bpp.lz");
 const u32 gMonFrontPic_KyogrePrimal[] = INCBIN_U32("graphics/pokemon/kyogre/primal/front.4bpp.lz");
 const u32 gMonFrontPic_GroudonPrimal[] = INCBIN_U32("graphics/pokemon/groudon/primal/front.4bpp.lz");
+const u32 gMonFrontPic_VenusaurGmax[] = INCBIN_U32("graphics/pokemon/gmax_venusaur/front.4bpp.lz");
+const u32 gMonFrontPic_CharizardGmax[] = INCBIN_U32("graphics/pokemon/gmax_charizard/front.4bpp.lz");
+const u32 gMonFrontPic_BlastoiseGmax[] = INCBIN_U32("graphics/pokemon/gmax_blastoise/front.4bpp.lz");
+const u32 gMonFrontPic_ButterfreeGmax[] = INCBIN_U32("graphics/pokemon/gmax_butterfree/front.4bpp.lz");
+const u32 gMonFrontPic_PikachuGmax[] = INCBIN_U32("graphics/pokemon/gmax_pikachu/front.4bpp.lz");
+const u32 gMonFrontPic_MeowthGmax[] = INCBIN_U32("graphics/pokemon/gmax_meowth/front.4bpp.lz");
+const u32 gMonFrontPic_MachampGmax[] = INCBIN_U32("graphics/pokemon/gmax_machamp/front.4bpp.lz");
+const u32 gMonFrontPic_GengarGmax[] = INCBIN_U32("graphics/pokemon/gmax_gengar/front.4bpp.lz");
+const u32 gMonFrontPic_KinglerGmax[] = INCBIN_U32("graphics/pokemon/gmax_kingler/front.4bpp.lz");
+const u32 gMonFrontPic_LaprasGmax[] = INCBIN_U32("graphics/pokemon/gmax_lapras/front.4bpp.lz");
+const u32 gMonFrontPic_EeveeGmax[] = INCBIN_U32("graphics/pokemon/gmax_eevee/front.4bpp.lz");
+const u32 gMonFrontPic_SnorlaxGmax[] = INCBIN_U32("graphics/pokemon/gmax_snorlax/front.4bpp.lz");
+#if P_GEN_5_POKEMON == TRUE
+const u32 gMonFrontPic_GarbodorGmax[] = INCBIN_U32("graphics/pokemon/gmax_garbodor/front.4bpp.lz");
+#endif
+#if P_GEN_7_POKEMON == TRUE
+const u32 gMonFrontPic_MelmetalGmax[] = INCBIN_U32("graphics/pokemon/gmax_melmetal/front.4bpp.lz");
+#endif
+#if P_GEN_8_POKEMON == TRUE
+const u32 gMonFrontPic_RillaboomGmax[] = INCBIN_U32("graphics/pokemon/gmax_rillaboom/front.4bpp.lz");
+const u32 gMonFrontPic_CinderaceGmax[] = INCBIN_U32("graphics/pokemon/gmax_cinderace/front.4bpp.lz");
+const u32 gMonFrontPic_InteleonGmax[] = INCBIN_U32("graphics/pokemon/gmax_inteleon/front.4bpp.lz");
+const u32 gMonFrontPic_CorviknightGmax[] = INCBIN_U32("graphics/pokemon/gmax_corviknight/front.4bpp.lz");
+const u32 gMonFrontPic_OrbeetleGmax[] = INCBIN_U32("graphics/pokemon/gmax_orbeetle/front.4bpp.lz");
+const u32 gMonFrontPic_DrednawGmax[] = INCBIN_U32("graphics/pokemon/gmax_drednaw/front.4bpp.lz");
+const u32 gMonFrontPic_CoalossalGmax[] = INCBIN_U32("graphics/pokemon/gmax_coalossal/front.4bpp.lz");
+const u32 gMonFrontPic_FlappleGmax[] = INCBIN_U32("graphics/pokemon/gmax_flapple/front.4bpp.lz");
+const u32 gMonFrontPic_AppletunGmax[] = INCBIN_U32("graphics/pokemon/gmax_appletun/front.4bpp.lz");
+const u32 gMonFrontPic_SandacondaGmax[] = INCBIN_U32("graphics/pokemon/gmax_sandaconda/front.4bpp.lz");
+const u32 gMonFrontPic_ToxtricityGmax[] = INCBIN_U32("graphics/pokemon/gmax_toxtricity/front.4bpp.lz");
+const u32 gMonFrontPic_CentiskorchGmax[] = INCBIN_U32("graphics/pokemon/gmax_centiskorch/front.4bpp.lz");
+const u32 gMonFrontPic_HattereneGmax[] = INCBIN_U32("graphics/pokemon/gmax_hatterene/front.4bpp.lz");
+const u32 gMonFrontPic_GrimmsnarlGmax[] = INCBIN_U32("graphics/pokemon/gmax_grimmsnarl/front.4bpp.lz");
+const u32 gMonFrontPic_AlcremieGmax[] = INCBIN_U32("graphics/pokemon/gmax_alcremie/front.4bpp.lz");
+const u32 gMonFrontPic_CopperajahGmax[] = INCBIN_U32("graphics/pokemon/gmax_copperajah/front.4bpp.lz");
+const u32 gMonFrontPic_DuraludonGmax[] = INCBIN_U32("graphics/pokemon/gmax_duraludon/front.4bpp.lz");
+const u32 gMonFrontPic_UrshifuGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu/front.4bpp.lz");
+const u32 gMonFrontPic_UrshifuRapidStrikeGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu_rapid_strike/front.4bpp.lz");
+#endif
 const u32 gMonFrontPic_RattataAlolan[] = INCBIN_U32("graphics/pokemon/rattata/alolan/front.4bpp.lz");
 const u32 gMonFrontPic_RaticateAlolan[] = INCBIN_U32("graphics/pokemon/raticate/alolan/front.4bpp.lz");
 const u32 gMonFrontPic_RaichuAlolan[] = INCBIN_U32("graphics/pokemon/raichu/alolan/front.4bpp.lz");
@@ -2200,6 +2239,43 @@ const u32 gMonBackPic_DiancieMega[] = INCBIN_U32("graphics/pokemon/diancie/mega/
 const u32 gMonBackPic_RayquazaMega[] = INCBIN_U32("graphics/pokemon/rayquaza/mega/back.4bpp.lz");
 const u32 gMonBackPic_KyogrePrimal[] = INCBIN_U32("graphics/pokemon/kyogre/primal/back.4bpp.lz");
 const u32 gMonBackPic_GroudonPrimal[] = INCBIN_U32("graphics/pokemon/groudon/primal/back.4bpp.lz");
+const u32 gMonBackPic_VenusaurGmax[] = INCBIN_U32("graphics/pokemon/gmax_venusaur/front.4bpp.lz");
+const u32 gMonBackPic_CharizardGmax[] = INCBIN_U32("graphics/pokemon/gmax_charizard/front.4bpp.lz");
+const u32 gMonBackPic_BlastoiseGmax[] = INCBIN_U32("graphics/pokemon/gmax_blastoise/front.4bpp.lz");
+const u32 gMonBackPic_ButterfreeGmax[] = INCBIN_U32("graphics/pokemon/gmax_butterfree/front.4bpp.lz");
+const u32 gMonBackPic_PikachuGmax[] = INCBIN_U32("graphics/pokemon/gmax_pikachu/front.4bpp.lz");
+const u32 gMonBackPic_MeowthGmax[] = INCBIN_U32("graphics/pokemon/gmax_meowth/front.4bpp.lz");
+const u32 gMonBackPic_MachampGmax[] = INCBIN_U32("graphics/pokemon/gmax_machamp/front.4bpp.lz");
+const u32 gMonBackPic_GengarGmax[] = INCBIN_U32("graphics/pokemon/gmax_gengar/front.4bpp.lz");
+const u32 gMonBackPic_KinglerGmax[] = INCBIN_U32("graphics/pokemon/gmax_kingler/front.4bpp.lz");
+const u32 gMonBackPic_LaprasGmax[] = INCBIN_U32("graphics/pokemon/gmax_lapras/front.4bpp.lz");
+const u32 gMonBackPic_EeveeGmax[] = INCBIN_U32("graphics/pokemon/gmax_eevee/front.4bpp.lz");
+const u32 gMonBackPic_SnorlaxGmax[] = INCBIN_U32("graphics/pokemon/gmax_snorlax/front.4bpp.lz");
+#if P_GEN_5_POKEMON == TRUE
+const u32 gMonBackPic_GarbodorGmax[] = INCBIN_U32("graphics/pokemon/gmax_garbodor/front.4bpp.lz");
+#endif
+#if P_GEN_8_POKEMON == TRUE
+const u32 gMonBackPic_MelmetalGmax[] = INCBIN_U32("graphics/pokemon/gmax_melmetal/front.4bpp.lz");
+const u32 gMonBackPic_RillaboomGmax[] = INCBIN_U32("graphics/pokemon/gmax_rillaboom/front.4bpp.lz");
+const u32 gMonBackPic_CinderaceGmax[] = INCBIN_U32("graphics/pokemon/gmax_cinderace/front.4bpp.lz");
+const u32 gMonBackPic_InteleonGmax[] = INCBIN_U32("graphics/pokemon/gmax_inteleon/front.4bpp.lz");
+const u32 gMonBackPic_CorviknightGmax[] = INCBIN_U32("graphics/pokemon/gmax_corviknight/front.4bpp.lz");
+const u32 gMonBackPic_OrbeetleGmax[] = INCBIN_U32("graphics/pokemon/gmax_orbeetle/front.4bpp.lz");
+const u32 gMonBackPic_DrednawGmax[] = INCBIN_U32("graphics/pokemon/gmax_drednaw/front.4bpp.lz");
+const u32 gMonBackPic_CoalossalGmax[] = INCBIN_U32("graphics/pokemon/gmax_coalossal/front.4bpp.lz");
+const u32 gMonBackPic_FlappleGmax[] = INCBIN_U32("graphics/pokemon/gmax_flapple/front.4bpp.lz");
+const u32 gMonBackPic_AppletunGmax[] = INCBIN_U32("graphics/pokemon/gmax_appletun/front.4bpp.lz");
+const u32 gMonBackPic_SandacondaGmax[] = INCBIN_U32("graphics/pokemon/gmax_sandaconda/front.4bpp.lz");
+const u32 gMonBackPic_ToxtricityGmax[] = INCBIN_U32("graphics/pokemon/gmax_toxtricity/front.4bpp.lz");
+const u32 gMonBackPic_CentiskorchGmax[] = INCBIN_U32("graphics/pokemon/gmax_centiskorch/front.4bpp.lz");
+const u32 gMonBackPic_HattereneGmax[] = INCBIN_U32("graphics/pokemon/gmax_hatterene/front.4bpp.lz");
+const u32 gMonBackPic_GrimmsnarlGmax[] = INCBIN_U32("graphics/pokemon/gmax_grimmsnarl/front.4bpp.lz");
+const u32 gMonBackPic_AlcremieGmax[] = INCBIN_U32("graphics/pokemon/gmax_alcremie/front.4bpp.lz");
+const u32 gMonBackPic_CopperajahGmax[] = INCBIN_U32("graphics/pokemon/gmax_copperajah/front.4bpp.lz");
+const u32 gMonBackPic_DuraludonGmax[] = INCBIN_U32("graphics/pokemon/gmax_duraludon/front.4bpp.lz");
+const u32 gMonBackPic_UrshifuGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu/front.4bpp.lz");
+const u32 gMonBackPic_UrshifuRapidStrikeGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu_rapid_strike/front.4bpp.lz");
+#endif
 const u32 gMonBackPic_RattataAlolan[] = INCBIN_U32("graphics/pokemon/rattata/alolan/back.4bpp.lz");
 const u32 gMonBackPic_RaticateAlolan[] = INCBIN_U32("graphics/pokemon/raticate/alolan/back.4bpp.lz");
 const u32 gMonBackPic_RaichuAlolan[] = INCBIN_U32("graphics/pokemon/raichu/alolan/back.4bpp.lz");
@@ -3406,6 +3482,45 @@ const u32 gMonPalette_DiancieMega[] = INCBIN_U32("graphics/pokemon/diancie/mega/
 const u32 gMonPalette_RayquazaMega[] = INCBIN_U32("graphics/pokemon/rayquaza/mega/normal.gbapal.lz");
 const u32 gMonPalette_KyogrePrimal[] = INCBIN_U32("graphics/pokemon/kyogre/primal/normal.gbapal.lz");
 const u32 gMonPalette_GroudonPrimal[] = INCBIN_U32("graphics/pokemon/groudon/primal/normal.gbapal.lz");
+const u32 gMonPalette_VenusaurGmax[] = INCBIN_U32("graphics/pokemon/gmax_venusaur/front.4bpp.lz");
+const u32 gMonPalette_CharizardGmax[] = INCBIN_U32("graphics/pokemon/gmax_charizard/front.4bpp.lz");
+const u32 gMonPalette_BlastoiseGmax[] = INCBIN_U32("graphics/pokemon/gmax_blastoise/front.4bpp.lz");
+const u32 gMonPalette_ButterfreeGmax[] = INCBIN_U32("graphics/pokemon/gmax_butterfree/front.4bpp.lz");
+const u32 gMonPalette_PikachuGmax[] = INCBIN_U32("graphics/pokemon/gmax_pikachu/front.4bpp.lz");
+const u32 gMonPalette_MeowthGmax[] = INCBIN_U32("graphics/pokemon/gmax_meowth/front.4bpp.lz");
+const u32 gMonPalette_MachampGmax[] = INCBIN_U32("graphics/pokemon/gmax_machamp/front.4bpp.lz");
+const u32 gMonPalette_GengarGmax[] = INCBIN_U32("graphics/pokemon/gmax_gengar/front.4bpp.lz");
+const u32 gMonPalette_KinglerGmax[] = INCBIN_U32("graphics/pokemon/gmax_kingler/front.4bpp.lz");
+const u32 gMonPalette_LaprasGmax[] = INCBIN_U32("graphics/pokemon/gmax_lapras/front.4bpp.lz");
+const u32 gMonPalette_EeveeGmax[] = INCBIN_U32("graphics/pokemon/gmax_eevee/front.4bpp.lz");
+const u32 gMonPalette_SnorlaxGmax[] = INCBIN_U32("graphics/pokemon/gmax_snorlax/front.4bpp.lz");
+#if P_GEN_5_POKEMON == TRUE
+const u32 gMonPalette_GarbodorGmax[] = INCBIN_U32("graphics/pokemon/gmax_garbodor/front.4bpp.lz");
+#endif
+#if P_GEN_7_POKEMON == TRUE
+const u32 gMonPalette_MelmetalGmax[] = INCBIN_U32("graphics/pokemon/gmax_melmetal/front.4bpp.lz");
+#endif
+#if P_GEN_8_POKEMON == TRUE
+const u32 gMonPalette_RillaboomGmax[] = INCBIN_U32("graphics/pokemon/gmax_rillaboom/front.4bpp.lz");
+const u32 gMonPalette_CinderaceGmax[] = INCBIN_U32("graphics/pokemon/gmax_cinderace/front.4bpp.lz");
+const u32 gMonPalette_InteleonGmax[] = INCBIN_U32("graphics/pokemon/gmax_inteleon/front.4bpp.lz");
+const u32 gMonPalette_CorviknightGmax[] = INCBIN_U32("graphics/pokemon/gmax_corviknight/front.4bpp.lz");
+const u32 gMonPalette_OrbeetleGmax[] = INCBIN_U32("graphics/pokemon/gmax_orbeetle/front.4bpp.lz");
+const u32 gMonPalette_DrednawGmax[] = INCBIN_U32("graphics/pokemon/gmax_drednaw/front.4bpp.lz");
+const u32 gMonPalette_CoalossalGmax[] = INCBIN_U32("graphics/pokemon/gmax_coalossal/front.4bpp.lz");
+const u32 gMonPalette_FlappleGmax[] = INCBIN_U32("graphics/pokemon/gmax_flapple/front.4bpp.lz");
+const u32 gMonPalette_AppletunGmax[] = INCBIN_U32("graphics/pokemon/gmax_appletun/front.4bpp.lz");
+const u32 gMonPalette_SandacondaGmax[] = INCBIN_U32("graphics/pokemon/gmax_sandaconda/front.4bpp.lz");
+const u32 gMonPalette_ToxtricityGmax[] = INCBIN_U32("graphics/pokemon/gmax_toxtricity/front.4bpp.lz");
+const u32 gMonPalette_CentiskorchGmax[] = INCBIN_U32("graphics/pokemon/gmax_centiskorch/front.4bpp.lz");
+const u32 gMonPalette_HattereneGmax[] = INCBIN_U32("graphics/pokemon/gmax_hatterene/front.4bpp.lz");
+const u32 gMonPalette_GrimmsnarlGmax[] = INCBIN_U32("graphics/pokemon/gmax_grimmsnarl/front.4bpp.lz");
+const u32 gMonPalette_AlcremieGmax[] = INCBIN_U32("graphics/pokemon/gmax_alcremie/front.4bpp.lz");
+const u32 gMonPalette_CopperajahGmax[] = INCBIN_U32("graphics/pokemon/gmax_copperajah/front.4bpp.lz");
+const u32 gMonPalette_DuraludonGmax[] = INCBIN_U32("graphics/pokemon/gmax_duraludon/front.4bpp.lz");
+const u32 gMonPalette_UrshifuGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu/front.4bpp.lz");
+const u32 gMonPalette_UrshifuRapidStrikeGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu_rapid_strike/front.4bpp.lz");
+#endif
 const u32 gMonPalette_RattataAlolan[] = INCBIN_U32("graphics/pokemon/rattata/alolan/normal.gbapal.lz");
 const u32 gMonPalette_RaticateAlolan[] = INCBIN_U32("graphics/pokemon/raticate/alolan/normal.gbapal.lz");
 const u32 gMonPalette_RaichuAlolan[] = INCBIN_U32("graphics/pokemon/raichu/alolan/normal.gbapal.lz");
@@ -4639,6 +4754,45 @@ const u32 gMonShinyPalette_DiancieMega[] = INCBIN_U32("graphics/pokemon/diancie/
 const u32 gMonShinyPalette_RayquazaMega[] = INCBIN_U32("graphics/pokemon/rayquaza/mega/shiny.gbapal.lz");
 const u32 gMonShinyPalette_KyogrePrimal[] = INCBIN_U32("graphics/pokemon/kyogre/primal/shiny.gbapal.lz");
 const u32 gMonShinyPalette_GroudonPrimal[] = INCBIN_U32("graphics/pokemon/groudon/primal/shiny.gbapal.lz");
+const u32 gMonShinyPalette_VenusaurGmax[] = INCBIN_U32("graphics/pokemon/gmax_venusaur/front.4bpp.lz");
+const u32 gMonShinyPalette_CharizardGmax[] = INCBIN_U32("graphics/pokemon/gmax_charizard/front.4bpp.lz");
+const u32 gMonShinyPalette_BlastoiseGmax[] = INCBIN_U32("graphics/pokemon/gmax_blastoise/front.4bpp.lz");
+const u32 gMonShinyPalette_ButterfreeGmax[] = INCBIN_U32("graphics/pokemon/gmax_butterfree/front.4bpp.lz");
+const u32 gMonShinyPalette_PikachuGmax[] = INCBIN_U32("graphics/pokemon/gmax_pikachu/front.4bpp.lz");
+const u32 gMonShinyPalette_MeowthGmax[] = INCBIN_U32("graphics/pokemon/gmax_meowth/front.4bpp.lz");
+const u32 gMonShinyPalette_MachampGmax[] = INCBIN_U32("graphics/pokemon/gmax_machamp/front.4bpp.lz");
+const u32 gMonShinyPalette_GengarGmax[] = INCBIN_U32("graphics/pokemon/gmax_gengar/front.4bpp.lz");
+const u32 gMonShinyPalette_KinglerGmax[] = INCBIN_U32("graphics/pokemon/gmax_kingler/front.4bpp.lz");
+const u32 gMonShinyPalette_LaprasGmax[] = INCBIN_U32("graphics/pokemon/gmax_lapras/front.4bpp.lz");
+const u32 gMonShinyPalette_EeveeGmax[] = INCBIN_U32("graphics/pokemon/gmax_eevee/front.4bpp.lz");
+const u32 gMonShinyPalette_SnorlaxGmax[] = INCBIN_U32("graphics/pokemon/gmax_snorlax/front.4bpp.lz");
+#if P_GEN_5_POKEMON == TRUE
+const u32 gMonShinyPalette_GarbodorGmax[] = INCBIN_U32("graphics/pokemon/gmax_garbodor/front.4bpp.lz");
+#endif
+#if P_GEN_7_POKEMON == TRUE
+const u32 gMonShinyPalette_MelmetalGmax[] = INCBIN_U32("graphics/pokemon/gmax_melmetal/front.4bpp.lz");
+#endif
+#if P_GEN_8_POKEMON == TRUE
+const u32 gMonShinyPalette_RillaboomGmax[] = INCBIN_U32("graphics/pokemon/gmax_rillaboom/front.4bpp.lz");
+const u32 gMonShinyPalette_CinderaceGmax[] = INCBIN_U32("graphics/pokemon/gmax_cinderace/front.4bpp.lz");
+const u32 gMonShinyPalette_InteleonGmax[] = INCBIN_U32("graphics/pokemon/gmax_inteleon/front.4bpp.lz");
+const u32 gMonShinyPalette_CorviknightGmax[] = INCBIN_U32("graphics/pokemon/gmax_corviknight/front.4bpp.lz");
+const u32 gMonShinyPalette_OrbeetleGmax[] = INCBIN_U32("graphics/pokemon/gmax_orbeetle/front.4bpp.lz");
+const u32 gMonShinyPalette_DrednawGmax[] = INCBIN_U32("graphics/pokemon/gmax_drednaw/front.4bpp.lz");
+const u32 gMonShinyPalette_CoalossalGmax[] = INCBIN_U32("graphics/pokemon/gmax_coalossal/front.4bpp.lz");
+const u32 gMonShinyPalette_FlappleGmax[] = INCBIN_U32("graphics/pokemon/gmax_flapple/front.4bpp.lz");
+const u32 gMonShinyPalette_AppletunGmax[] = INCBIN_U32("graphics/pokemon/gmax_appletun/front.4bpp.lz");
+const u32 gMonShinyPalette_SandacondaGmax[] = INCBIN_U32("graphics/pokemon/gmax_sandaconda/front.4bpp.lz");
+const u32 gMonShinyPalette_ToxtricityGmax[] = INCBIN_U32("graphics/pokemon/gmax_toxtricity/front.4bpp.lz");
+const u32 gMonShinyPalette_CentiskorchGmax[] = INCBIN_U32("graphics/pokemon/gmax_centiskorch/front.4bpp.lz");
+const u32 gMonShinyPalette_HattereneGmax[] = INCBIN_U32("graphics/pokemon/gmax_hatterene/front.4bpp.lz");
+const u32 gMonShinyPalette_GrimmsnarlGmax[] = INCBIN_U32("graphics/pokemon/gmax_grimmsnarl/front.4bpp.lz");
+const u32 gMonShinyPalette_AlcremieGmax[] = INCBIN_U32("graphics/pokemon/gmax_alcremie/front.4bpp.lz");
+const u32 gMonShinyPalette_CopperajahGmax[] = INCBIN_U32("graphics/pokemon/gmax_copperajah/front.4bpp.lz");
+const u32 gMonShinyPalette_DuraludonGmax[] = INCBIN_U32("graphics/pokemon/gmax_duraludon/front.4bpp.lz");
+const u32 gMonShinyPalette_UrshifuGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu/front.4bpp.lz");
+const u32 gMonShinyPalette_UrshifuRapidStrikeGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu_rapid_strike/front.4bpp.lz");
+#endif
 const u32 gMonShinyPalette_RattataAlolan[] = INCBIN_U32("graphics/pokemon/rattata/alolan/shiny.gbapal.lz");
 const u32 gMonShinyPalette_RaticateAlolan[] = INCBIN_U32("graphics/pokemon/raticate/alolan/shiny.gbapal.lz");
 const u32 gMonShinyPalette_RaichuAlolan[] = INCBIN_U32("graphics/pokemon/raichu/alolan/shiny.gbapal.lz");
@@ -5862,6 +6016,45 @@ const u8 gMonIcon_DiancieMega[] = INCBIN_U8("graphics/pokemon/diancie/mega/icon.
 const u8 gMonIcon_RayquazaMega[] = INCBIN_U8("graphics/pokemon/rayquaza/mega/icon.4bpp");
 const u8 gMonIcon_KyogrePrimal[] = INCBIN_U8("graphics/pokemon/kyogre/primal/icon.4bpp");
 const u8 gMonIcon_GroudonPrimal[] = INCBIN_U8("graphics/pokemon/groudon/primal/icon.4bpp");
+const u32 gMonIcon_VenusaurGmax[] = INCBIN_U32("graphics/pokemon/gmax_venusaur/front.4bpp.lz");
+const u32 gMonIcon_CharizardGmax[] = INCBIN_U32("graphics/pokemon/gmax_charizard/front.4bpp.lz");
+const u32 gMonIcon_BlastoiseGmax[] = INCBIN_U32("graphics/pokemon/gmax_blastoise/front.4bpp.lz");
+const u32 gMonIcon_ButterfreeGmax[] = INCBIN_U32("graphics/pokemon/gmax_butterfree/front.4bpp.lz");
+const u32 gMonIcon_PikachuGmax[] = INCBIN_U32("graphics/pokemon/gmax_pikachu/front.4bpp.lz");
+const u32 gMonIcon_MeowthGmax[] = INCBIN_U32("graphics/pokemon/gmax_meowth/front.4bpp.lz");
+const u32 gMonIcon_MachampGmax[] = INCBIN_U32("graphics/pokemon/gmax_machamp/front.4bpp.lz");
+const u32 gMonIcon_GengarGmax[] = INCBIN_U32("graphics/pokemon/gmax_gengar/front.4bpp.lz");
+const u32 gMonIcon_KinglerGmax[] = INCBIN_U32("graphics/pokemon/gmax_kingler/front.4bpp.lz");
+const u32 gMonIcon_LaprasGmax[] = INCBIN_U32("graphics/pokemon/gmax_lapras/front.4bpp.lz");
+const u32 gMonIcon_EeveeGmax[] = INCBIN_U32("graphics/pokemon/gmax_eevee/front.4bpp.lz");
+const u32 gMonIcon_SnorlaxGmax[] = INCBIN_U32("graphics/pokemon/gmax_snorlax/front.4bpp.lz");
+#if P_GEN_5_POKEMON == TRUE
+const u32 gMonIcon_GarbodorGmax[] = INCBIN_U32("graphics/pokemon/gmax_garbodor/front.4bpp.lz");
+#endif
+#if P_GEN_7_POKEMON == TRUE
+const u32 gMonIcon_MelmetalGmax[] = INCBIN_U32("graphics/pokemon/gmax_melmetal/front.4bpp.lz");
+#endif
+#if P_GEN_8_POKEMON == TRUE
+const u32 gMonIcon_RillaboomGmax[] = INCBIN_U32("graphics/pokemon/gmax_rillaboom/front.4bpp.lz");
+const u32 gMonIcon_CinderaceGmax[] = INCBIN_U32("graphics/pokemon/gmax_cinderace/front.4bpp.lz");
+const u32 gMonIcon_InteleonGmax[] = INCBIN_U32("graphics/pokemon/gmax_inteleon/front.4bpp.lz");
+const u32 gMonIcon_CorviknightGmax[] = INCBIN_U32("graphics/pokemon/gmax_corviknight/front.4bpp.lz");
+const u32 gMonIcon_OrbeetleGmax[] = INCBIN_U32("graphics/pokemon/gmax_orbeetle/front.4bpp.lz");
+const u32 gMonIcon_DrednawGmax[] = INCBIN_U32("graphics/pokemon/gmax_drednaw/front.4bpp.lz");
+const u32 gMonIcon_CoalossalGmax[] = INCBIN_U32("graphics/pokemon/gmax_coalossal/front.4bpp.lz");
+const u32 gMonIcon_FlappleGmax[] = INCBIN_U32("graphics/pokemon/gmax_flapple/front.4bpp.lz");
+const u32 gMonIcon_AppletunGmax[] = INCBIN_U32("graphics/pokemon/gmax_appletun/front.4bpp.lz");
+const u32 gMonIcon_SandacondaGmax[] = INCBIN_U32("graphics/pokemon/gmax_sandaconda/front.4bpp.lz");
+const u32 gMonIcon_ToxtricityGmax[] = INCBIN_U32("graphics/pokemon/gmax_toxtricity/front.4bpp.lz");
+const u32 gMonIcon_CentiskorchGmax[] = INCBIN_U32("graphics/pokemon/gmax_centiskorch/front.4bpp.lz");
+const u32 gMonIcon_HattereneGmax[] = INCBIN_U32("graphics/pokemon/gmax_hatterene/front.4bpp.lz");
+const u32 gMonIcon_GrimmsnarlGmax[] = INCBIN_U32("graphics/pokemon/gmax_grimmsnarl/front.4bpp.lz");
+const u32 gMonIcon_AlcremieGmax[] = INCBIN_U32("graphics/pokemon/gmax_alcremie/front.4bpp.lz");
+const u32 gMonIcon_CopperajahGmax[] = INCBIN_U32("graphics/pokemon/gmax_copperajah/front.4bpp.lz");
+const u32 gMonIcon_DuraludonGmax[] = INCBIN_U32("graphics/pokemon/gmax_duraludon/front.4bpp.lz");
+const u32 gMonIcon_UrshifuGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu/front.4bpp.lz");
+const u32 gMonIcon_UrshifuRapidStrikeGmax[] = INCBIN_U32("graphics/pokemon/gmax_urshifu_rapid_strike/front.4bpp.lz");
+#endif
 const u8 gMonIcon_RattataAlolan[] = INCBIN_U8("graphics/pokemon/rattata/alolan/icon.4bpp");
 const u8 gMonIcon_RaticateAlolan[] = INCBIN_U8("graphics/pokemon/raticate/alolan/icon.4bpp");
 const u8 gMonIcon_RaichuAlolan[] = INCBIN_U8("graphics/pokemon/raichu/alolan/icon.4bpp");

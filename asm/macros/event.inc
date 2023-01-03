@@ -2018,3 +2018,8 @@
 	setvar VAR_0x8002, \tryMultiple
 	special TrySpecialOverworldEvo
 	.endm
+
+    .macro startraidbattle rating:req
+    setvar VAR_0x8008, \rating
+    special StartRaidBattle
+    .endm
